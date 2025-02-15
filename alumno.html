@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Alumnos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Alumnos</h1>
+        <form action="registro.php" method="post">
+            <div class="form-group">
+                <label for="idAlumno">ID del Alumno:</label>
+                <input type="text" class="form-control" id="idAlumno" name="idAlumno">
+            </div>
+            <div class="form-group">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" class="form-control" id="Nombre" name="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="A_Paterno">Apellido Paterno:</label>
+                <input type="text" class="form-control" id="A_Paterno" name="A_Paterno">
+            </div>
+            <div class="form-group">
+                <label for="A_Materno">Apellido Materno:</label>
+                <input type="text" class="form-control" id="A_Materno" name="A_Materno">
+            </div>
+            <div class="form-group">
+                <label for="Tutor">Tutor:</label>
+                <input type="text" class="form-control" id="Tutor" name="Tutor">
+            </div>
+            <div class="form-group">
+                <label for="Domicilio">Domicilio:</label>
+                <input type="text" class="form-control" id="Domicilio" name="Domicilio">
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+CREATE DATABASE Escuela;
+
+CREATE TABLE Materia(idMateria INT AUTO_INCREMENT,
+                        Nombre VARCHAR (50),
+                        PRIMARY KEY (idMateria));
+
+CREATE TABLE Profesor(idProfesor INT AUTO_INCREMENT,
+                        Nombre VARCHAR (50),
+                        A_Materno VARCHAR(50),
+                        A_Paterno VARCHAR(50),
+                        Domicilio VARCHAR(50),
+                        PRIMARY KEY (idProfesor));
+CREATE TABLE Alumno(idAlumno INT AUTO_INCREMENT,
+                        Nombre VARCHAR(50),
+                        A_Materno VARCHAR(50),
+                        A_Paterno VARCHAR(50),
+                        Tutor VARCHAR(50),
+                        Domicilio VARCHAR(50),
+                        PRIMARY KEY (idAlumno));
+CREATE TABLE Materia_Alumno(idMateria INT,
+                            idAlumno INT,
+                            FOREIGN KEY(idAlumno) REFERENCES Alumno(idAlumno),
+                            FOREIGN KEY(idMateria) REFERENCES Materia(idMateria));
+CREATE TABLE Materia_Profesor(idMateria int,
+                              idProfesor int,
+                              FOREIGN KEY(idMateria) REFERENCES Materia(idMateria),
+                              FOREIGN KEY(idProfesor) REFERENCES Profesor(idProfesor));
+CREATE TABLE Alumno_Profesor(idAlumno int,
+                             idProfesor int,
+                             FOREIGN KEY(idAlumno) REFERENCES Alumno(idAlumno),
+                             FOREIGN KEY(idProfesor) REFERENCES Profesor(idProfesor));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
