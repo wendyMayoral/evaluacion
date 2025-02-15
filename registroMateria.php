@@ -1,11 +1,9 @@
 <?php
 // Conexión a la base de datos
 $servername = "localhost";
-$username = "tu_usuario";
-$password = "tu_contraseña";
 $dbname = "escuela";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername,$dbname);
 
 // Verificar conexión
 if ($conn->connect_error) {
